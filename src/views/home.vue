@@ -1,13 +1,18 @@
 <template>
     <div>
-   home.vue
+<heaDer></heaDer>
+
     </div>
 </template>
 
 <script setup lang="ts">
-
+import heaDer from '../components/header.vue'
+import {computed } from 'vue'
+import { useStore } from 'vuex';
+const store = useStore()
+const count = computed(()=>store.state.count)
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>
